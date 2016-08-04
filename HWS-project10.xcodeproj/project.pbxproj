@@ -12,6 +12,8 @@
 		E66ED8F71D52783800F899CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E66ED8F51D52783800F899CA /* Main.storyboard */; };
 		E66ED8F91D52783800F899CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E66ED8F81D52783800F899CA /* Assets.xcassets */; };
 		E66ED8FC1D52783800F899CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E66ED8FA1D52783800F899CA /* LaunchScreen.storyboard */; };
+		E66ED9041D527A2600F899CA /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66ED9031D527A2600F899CA /* PersonCell.swift */; };
+		E66ED9061D52835A00F899CA /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66ED9051D52835A00F899CA /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		E66ED8F81D52783800F899CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E66ED8FB1D52783800F899CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E66ED8FD1D52783800F899CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E66ED9031D527A2600F899CA /* PersonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
+		E66ED9051D52835A00F899CA /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				E66ED8F81D52783800F899CA /* Assets.xcassets */,
 				E66ED8FA1D52783800F899CA /* LaunchScreen.storyboard */,
 				E66ED8FD1D52783800F899CA /* Info.plist */,
+				E66ED9031D527A2600F899CA /* PersonCell.swift */,
+				E66ED9051D52835A00F899CA /* Person.swift */,
 			);
 			path = "HWS-project10";
 			sourceTree = "<group>";
@@ -135,7 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E66ED9041D527A2600F899CA /* PersonCell.swift in Sources */,
 				E66ED8F41D52783800F899CA /* ViewController.swift in Sources */,
+				E66ED9061D52835A00F899CA /* Person.swift in Sources */,
 				E66ED8F21D52783800F899CA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
