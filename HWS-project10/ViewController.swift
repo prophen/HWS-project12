@@ -18,6 +18,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         super.viewDidLoad()
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(ViewController.addNewPerson))
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        if let savedPeople = defaults.objectForKey("people") as? NSData {
+            people = NSKeyedUnarchiver.unarchiveObjectWithData(savedPeople) as! [Person]
+        }
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -55,7 +60,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             person.name = newName.text!
             
             self.collectionView.reloadData()
-        })
+            self.save()
+            })
         
         presentViewController(ac, animated: true, completion: nil)
     }
@@ -86,6 +92,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         self.collectionView.reloadData()
         
         dismissViewControllerAnimated(true, completion: nil)
+        save()
         
         
         
@@ -102,6 +109,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         picker.allowsEditing = false
         picker.delegate = self
         presentViewController(picker, animated: true, completion: nil)
+    }
+    
+    func save() {
+        let savedData = NSKeyedArchiver.archivedDataWithRootObject(people)
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject(savedData, forKey: "people")
+        
     }
 
    
